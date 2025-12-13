@@ -1,0 +1,99 @@
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdf6f0;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #fce6c3, #c6a36b);
+      padding: 2rem;
+      text-align: center;
+      color: #fff;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    form {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    label {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    input, select, textarea, button {
+      margin-top: 0.5rem;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    textarea {
+      resize: vertical;
+    }
+    button {
+      margin-top: 1.5rem;
+      border-color: #333;
+      border-style: solid;
+      color: black;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #e0bd72;
+    }    label {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    .guest-category {
+      margin-top: 1rem;
+      padding-left: 1rem;
+    }
+    .guest-category button {
+      display: block;
+      width: 100%;
+      margin: 0.25rem 0;
+      background: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 0.5rem;
+      cursor: pointer;
+      text-align: left;
+    }
+    .guest-category button:hover {
+      background: #ddd;
+    }
+
+    #selection-box {
+      margin-top: 1rem;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      display: none; /* hidden until a guest is selected */
+    }
+    #selection-box.selected {
+      display: block;
+      background-color: #d4edda; /* greenish confirmation */
+      border: 2px solid #28a745;
+      color: #155724;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+    }

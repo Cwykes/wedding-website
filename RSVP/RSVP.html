@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding RSVP</title>
+  <link rel="stylesheet" href="./RSVP.css">
+</head>
+<body>
+    <h1>Callum & Jade's Wedding</h1>
+    <p>Please RSVP below</p>
+    <form action="https://formspree.io/f/mwpgyrzq" method="POST">
+      <label>Select Guest:</label>
+      <div id="guest-dropdown">
+
+        <details class="guest-category">
+          <summary>Bride</summary>
+          
+          <details class="guest-category">
+            <summary>Family</summary>
+            
+            <details class="guest-category">
+              <summary>Mom's Side</summary>
+              <button type="button" onclick="selectGuest('WunLin & Dave')">Wun Lin & Dave</button>
+              <button type="button" onclick="selectGuest('William & Jo')">William & Jo</button>
+              <button type="button" onclick="selectGuest('Ken & IDK')">Ken & IDK</button>
+            </details>
+            
+            <details class="guest-category">
+              <summary>Dad's Side</summary>
+              <button type="button" onclick="selectGuest('Jon & Michelle')">Jon & Michelle</button>
+              <button type="button" onclick="selectGuest('Jennifer & Doug')">Jennifer & Doug</button>
+            </details>
+            </details>
+
+            <details class="guest-category">
+              <summary>Friends</summary>
+              <button type="button" onclick="selectGuest('Anna Kieron')">Anna & Kieron</button>
+              <button type="button" onclick="selectGuest('Fran')">Fran</button>
+              <button type="button" onclick="selectGuest('Maya')">Maya</button>
+            </details>
+          </details>          
+        </details>
+        
+        <details class="guest-category">
+          <summary>Groom</summary>
+          
+          <details class="guest-category">
+            <summary>Family</summary>
+            
+            <details class="guest-category">
+              <summary>Mom's Side</summary>
+              <button type="button" onclick="selectGuest('Louise')">Louise</button>
+              <button type="button" onclick="selectGuest('Margureet')">Marg</button>
+              <button type="button" onclick="selectGuest('Alan Kelly & Seren')">Alan, Kelly & Seren</button>
+            </details>
+            
+            <details class="guest-category">
+              <summary>Dad's Side</summary>
+              <button type="button" onclick="selectGuest('Tony & Debbie')">Tony & Debbie</button>
+              <button type="button" onclick="selectGuest('Finley & Kieran')">Finley & Kieran</button>
+              <button type="button" onclick="selectGuest('Jordan Ellie & Lucas')">Jordan, Ellie & Lucas</button>
+            </details>
+            </details>
+
+            <details class="guest-category">
+              <summary>Friends</summary>
+              <button type="button" onclick="selectGuest('Abdi')">Abdi</button>
+              <button type="button" onclick="selectGuest('Lauren')">Lauren</button>
+              <button type="button" onclick="selectGuest('Pedro')">Pedro</button>
+              <button type="button" onclick="selectGuest('Natasha')">Natasha</button>
+            </details>
+          </details>      
+        </details>
+
+      </div>
+
+      <div id="selection-box"></div>
+
+      <label for="attendance">Will you be attending?</label>
+      <select id="attendance" name="attendance" required>
+        <option value="">-- Please select --</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <label for="guests">How many will be attending?</label>
+      <input type="number" id="guests" name="guests" min="1" max="10" required>
+
+      <label for="message">Leave us a message:</label>
+      <textarea id="message" name="message" rows="4" placeholder=""></textarea>
+
+      <button type="submit">Send RSVP</button>
+      
+      <input type="hidden" name="_redirect" value="../Index.html">
+      <input type="hidden" id="guest" name="guest" required>
+    </form>
+  <footer>
+    <p>We can’t wait to celebrate with you 💕</p>
+  </footer>
+    <script src="RSVP.js"></script>
+</body>
+</html>
