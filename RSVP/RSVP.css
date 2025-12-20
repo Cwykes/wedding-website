@@ -1,99 +1,135 @@
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #fdf6f0;
-      color: #333;
+  :root {
+    --white: #fdf6f0;
+    --black: #36454F;
+  } 
+    
+   
+   body {
+      font-family: "Bodoni Moda", serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      background: var(--white);
+      color: var(--black);
       margin: 0;
       padding: 0;
-      background: linear-gradient(to right, #fce6c3, #c6a36b);
       padding: 2rem;
       text-align: center;
-      color: #fff;
+
+      background-image: url('../Assets/RSVP/rsvp-background0.png'); 
+      background-size: cover;
+      background-position: center;
     }
     h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 4rem;
     }
     form {
       max-width: 600px;
-      margin: 2rem auto;
-      background: #fff;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      color: #333;
+
       display: flex;
       flex-direction: column;
-      text-align: left;
+      text-align: center;
+
+      background-color: 0;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 10px;
+
+      color: var(--black);
+
+    }
+
+    hr {
+      margin: 2rem 2rem;
+      border: none;
+      border-top: 1px solid var(--black);
     }
 
     label {
       margin-top: 1rem;
-      font-weight: bold;
+      font-weight: 400;
+      font-size: 1.5rem;
     }
     input, select, textarea, button {
       margin-top: 0.5rem;
       padding: 0.75rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+      border: 0px solid var(--white);
+      border-radius: 40px;
       font-size: 1rem;
+      text-align: center;
+
+      color: var(--black)
     }
     textarea {
       resize: vertical;
     }
     button {
       margin-top: 1.5rem;
-      border-color: #333;
+      border-color: var(--black);
       border-style: solid;
-      color: black;
+      background-color: var(--white);
+      color: var(--black);
       font-size: 1.2rem;
       cursor: pointer;
+      border-radius: 40px;
       transition: background 0.3s ease;
     }
     button:hover {
-      background: #e0bd72;
-    }    label {
-      margin-top: 1rem;
-      font-weight: bold;
+      background: #EADBC8;
+    }
+
+    #guest-dropdown {
+      text-align: left;
     }
 
     .guest-category {
       margin-top: 1rem;
-      padding-left: 1rem;
+      padding-left: 5rem;
     }
     .guest-category button {
       display: block;
-      width: 100%;
+      width:  100%;
       margin: 0.25rem 0;
-      background: #f0f0f0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+      border-radius: 40px;
       padding: 0.5rem;
+      padding-left: 2rem;
       cursor: pointer;
       text-align: left;
+
+      background-color: 0;
     }
     .guest-category button:hover {
-      background: #ddd;
+      background: #EADBC8;
     }
 
     #selection-box {
       margin-top: 1rem;
       padding: 1rem;
-      border-radius: 8px;
+      border-radius: 40px;
       text-align: center;
       font-weight: bold;
       display: none; /* hidden until a guest is selected */
     }
     #selection-box.selected {
       display: block;
-      background-color: #d4edda; /* greenish confirmation */
-      border: 2px solid #28a745;
       color: #155724;
     }
-
 
     footer {
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
-      color: #666;
+      color: var(--black);
     }
+/* Mobile layout */
+@media (max-width: 900px) {
+
+  body {
+    background-image: url('../Assets/RSVP/rsvp-background1.png');
+  }
+
+      h1 {
+      margin: 0;
+      font-size: 3rem;
+    }
+}

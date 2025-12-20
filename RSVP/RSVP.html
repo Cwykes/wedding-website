@@ -5,41 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wedding RSVP</title>
   <link rel="stylesheet" href="./RSVP.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bonheur+Royale&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>Callum & Jade's Wedding</h1>
-    <p>Please RSVP below</p>
+    <h2>Please RSVP below</h2>
     <form action="https://formspree.io/f/mwpgyrzq" method="POST">
+
       <label>Select Guest:</label>
       <div id="guest-dropdown">
-
         <details class="guest-category">
           <summary>Bride</summary>
           
           <details class="guest-category">
             <summary>Family</summary>
-            
-            <details class="guest-category">
-              <summary>Mom's Side</summary>
-              <button type="button" onclick="selectGuest('WunLin & Dave')">Wun Lin & Dave</button>
+              <button type="button" onclick="selectGuest('Wun Lin & Dave')">Wun Lin & Dave</button>
               <button type="button" onclick="selectGuest('William & Jo')">William & Jo</button>
-              <button type="button" onclick="selectGuest('Ken & IDK')">Ken & IDK</button>
-            </details>
-            
-            <details class="guest-category">
-              <summary>Dad's Side</summary>
+              <button type="button" onclick="selectGuest('Ken & Kelly')">Ken & Kelly</button>
               <button type="button" onclick="selectGuest('Jon & Michelle')">Jon & Michelle</button>
               <button type="button" onclick="selectGuest('Jennifer & Doug')">Jennifer & Doug</button>
-            </details>
-            </details>
+          </details>
 
             <details class="guest-category">
               <summary>Friends</summary>
-              <button type="button" onclick="selectGuest('Anna Kieron')">Anna & Kieron</button>
+              <button type="button" onclick="selectGuest('Anna & Kieron')">Anna & Kieron</button>
               <button type="button" onclick="selectGuest('Fran')">Fran</button>
               <button type="button" onclick="selectGuest('Maya')">Maya</button>
-            </details>
-          </details>          
+            </details>       
         </details>
         
         <details class="guest-category">
@@ -47,20 +41,12 @@
           
           <details class="guest-category">
             <summary>Family</summary>
-            
-            <details class="guest-category">
-              <summary>Mom's Side</summary>
               <button type="button" onclick="selectGuest('Louise')">Louise</button>
               <button type="button" onclick="selectGuest('Margureet')">Marg</button>
-              <button type="button" onclick="selectGuest('Alan Kelly & Seren')">Alan, Kelly & Seren</button>
-            </details>
-            
-            <details class="guest-category">
-              <summary>Dad's Side</summary>
+              <button type="button" onclick="selectGuest('Alan, Kelly & Seren')">Alan, Kelly & Seren</button>
               <button type="button" onclick="selectGuest('Tony & Debbie')">Tony & Debbie</button>
               <button type="button" onclick="selectGuest('Finley & Kieran')">Finley & Kieran</button>
-              <button type="button" onclick="selectGuest('Jordan Ellie & Lucas')">Jordan, Ellie & Lucas</button>
-            </details>
+              <button type="button" onclick="selectGuest('Jordan, Ellie & Lucas')">Jordan, Ellie & Lucas</button>
             </details>
 
             <details class="guest-category">
@@ -69,13 +55,13 @@
               <button type="button" onclick="selectGuest('Lauren')">Lauren</button>
               <button type="button" onclick="selectGuest('Pedro')">Pedro</button>
               <button type="button" onclick="selectGuest('Natasha')">Natasha</button>
-            </details>
-          </details>      
+            </details>  
         </details>
-
       </div>
 
       <div id="selection-box"></div>
+      
+      <hr>
 
       <label for="attendance">Will you be attending?</label>
       <select id="attendance" name="attendance" required>
@@ -84,11 +70,17 @@
         <option value="no">No</option>
       </select>
 
+      <hr>
+
       <label for="guests">How many will be attending?</label>
       <input type="number" id="guests" name="guests" min="1" max="10" required>
 
+      <hr>
+
       <label for="message">Leave us a message:</label>
       <textarea id="message" name="message" rows="4" placeholder=""></textarea>
+
+      <hr>
 
       <button type="submit">Send RSVP</button>
       
