@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function requireGuest() {
   const type = sessionStorage.getItem("guestType");
   if (!type) {
-    window.location.href = "./GateKeeper/Gatekeeper.html";
+    window.location.href = "./Gatekeeper/Gatekeeper.html";
   }
   return type;
 }
