@@ -1,135 +1,147 @@
-  :root {
-    --white: #fdf6f0;
-    --black: #36454F;
-  } 
-    
-   
-   body {
-      font-family: "Bodoni Moda", serif;
-      font-optical-sizing: auto;
-      font-weight: 400;
-      background: var(--white);
-      color: var(--black);
-      margin: 0;
-      padding: 0;
-      padding: 2rem;
-      text-align: center;
+:root {
+--white: #fdf6f0;
+--black: #36454F;
+} 
 
-      background-image: url('../Assets/RSVP/rsvp-background0.png'); 
-      background-size: cover;
-      background-position: center;
-    }
-    h1 {
-      margin: 0;
-      font-size: 4rem;
-    }
-    form {
-      max-width: 600px;
+body {
+  font-family: "Crimson Pro", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  background: var(--white);
+  color: var(--black);
+  padding: 2rem;
+  text-align: center;
 
-      display: flex;
-      flex-direction: column;
-      text-align: center;
+  background-image: url('../Assets/RSVP/Botanical-Background-PC.png'); 
+  background-size: cover;
+  background-position: center;
+}
 
-      background-color: 0;
-      margin: 2rem auto;
-      padding: 2rem;
-      border-radius: 10px;
+h1 {
+  margin: 0;
+  font-size: 4rem;
+  font-family: "Cormorant SC", serif;
+  font-style: normal;
+}
 
-      color: var(--black);
+form {
+  max-width: 600px;
 
-    }
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 
-    hr {
-      margin: 2rem 2rem;
-      border: none;
-      border-top: 1px solid var(--black);
-    }
+  background-color: 0;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
 
-    label {
-      margin-top: 1rem;
-      font-weight: 400;
-      font-size: 1.5rem;
-    }
-    input, select, textarea, button {
-      margin-top: 0.5rem;
-      padding: 0.75rem;
-      border: 0px solid var(--white);
-      border-radius: 40px;
-      font-size: 1rem;
-      text-align: center;
+  color: var(--black);
+}
 
-      color: var(--black)
-    }
-    textarea {
-      resize: vertical;
-    }
-    button {
-      margin-top: 1.5rem;
-      border-color: var(--black);
-      border-style: solid;
-      background-color: var(--white);
-      color: var(--black);
-      font-size: 1.2rem;
-      cursor: pointer;
-      border-radius: 40px;
-      transition: background 0.3s ease;
-    }
-    button:hover {
-      background: #EADBC8;
-    }
+hr {
+  margin: 2rem 2rem;
+  border: none;
+  border-top: 1px solid var(--black);
+}
 
-    #guest-dropdown {
-      text-align: left;
-    }
+label {
+  margin-top: 1rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
 
-    .guest-category {
-      margin-top: 1rem;
-      padding-left: 5rem;
-    }
-    .guest-category button {
-      display: block;
-      width:  100%;
-      margin: 0.25rem 0;
-      border-radius: 40px;
-      padding: 0.5rem;
-      padding-left: 2rem;
-      cursor: pointer;
-      text-align: left;
+input, select, textarea, button {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  border: 0px solid var(--white);
+  border-radius: 40px;
+  font-size: 1rem;
+  text-align: center;
 
-      background-color: 0;
-    }
-    .guest-category button:hover {
-      background: #EADBC8;
-    }
+  color: var(--black);
+}
 
-    #selection-box {
-      margin-top: 1rem;
-      padding: 1rem;
-      border-radius: 40px;
-      text-align: center;
-      font-weight: bold;
-      display: none; /* hidden until a guest is selected */
-    }
-    #selection-box.selected {
-      display: block;
-      color: #155724;
-    }
+*:focus {
+  outline: none;
+  border-color: inherit;
+}
 
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: var(--black);
-    }
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  margin-top: 1.5rem;
+  border-color: var(--black);
+  border-style: solid;
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+background: var(--white);
+}
+
+#guest-dropdown {
+text-align: left;
+}
+
+.guest-category {
+margin-top: 1rem;
+padding-left: 3rem;
+}
+.guest-category button {
+display: block;
+width:  100%;
+margin: 0.25rem 0;
+border-radius: 40px;
+padding: 0.5rem;
+padding-left: 2rem;
+cursor: pointer;
+text-align: left;
+
+background-color: 0;
+}
+.guest-category button:hover {
+background: var(--white);
+}
+
+#selection-box {
+margin-top: 1rem;
+padding: 1rem;
+border-radius: 40px;
+text-align: center;
+font-weight: bold;
+display: none; /* hidden until a guest is selected */
+}
+#selection-box.selected {
+display: block;
+color: #155724;
+}
+
+footer {
+text-align: center;
+padding: 1rem;
+font-size: 0.9rem;
+color: var(--black);
+}
+
+
 /* Mobile layout */
 @media (max-width: 900px) {
 
-  body {
-    background-image: url('../Assets/RSVP/rsvp-background1.png');
-  }
+body {
+  background-image: url('../Assets/RSVP/Botanical-Background-mobile.jpeg');
+}
 
-      h1 {
-      margin: 0;
-      font-size: 3rem;
-    }
+  h1 {
+  margin: 0;
+  font-size: 3rem;
+}
 }

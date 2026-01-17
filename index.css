@@ -22,7 +22,8 @@ body {
 }
 
 .brand {
-  font-family: "Playfair Display", serif;
+  /*font-family: "Playfair Display", serif;*/
+  
   font-weight: 700;
   font-size: 1.25rem;
 }
@@ -68,6 +69,8 @@ body {
   background: rgba(0,0,0,0.4); /* dark overlay */
 }
 .hero-content {
+  font-family: "Cormorant SC", serif;
+
   position: absolute;
   bottom: 2rem;
   left: 2rem;
@@ -80,6 +83,7 @@ body {
   font-size: clamp(4rem, 10vw, 7rem);
   font-weight: 400;
   font-family: "Bonheur Royale", cursive;
+  /*font-family: "Cormorant SC", serif;*/
   margin-bottom: 1rem;
 }
 .countdown {
@@ -100,6 +104,14 @@ body {
   margin-bottom: 3rem;
 }
 
+.hero-right section h2 {
+  font-family: "Cormorant SC", serif;
+}
+
+.hero-right section p {
+    font-family: "Crimson Pro", serif;
+}
+
 hr{
   height: 5rem;
   width: 0px;
@@ -107,7 +119,7 @@ hr{
 
 /*------------------------------------ Date Location */
 
-.date-location {
+#details {
   text-align: center;
   align-items: center;
   justify-content: center;
