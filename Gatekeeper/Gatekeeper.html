@@ -2,17 +2,23 @@
 <html>
 <head>
   <title>Wedding Access</title>
+  <link rel="stylesheet" href="../Global.css">
   <link rel="stylesheet" href="./Gatekeeper.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bonheur+Royale&display=swap" rel="stylesheet">
 </head>
 <body> 
-        <h2>Welcome to the wedding website</h2>
-        <p class="subtitle">I can't let you in until you have told me the password.</p>
-        
-        <input id="pw" type="password" placeholder="Password" class="input" />
-        <hr>
-        <button id="loginBtn" class="btn">Continue</button>
-        
-        <p id="error" class="error hidden">That's not what I have written down.</p>
-    <script src="./Gatekeeper.js"></script>
+  <h1>Callum & Jade's Wedding</h1>
+  <h2 class="subtitle">I can't let you in until you have told me the password.</h2>
+  <div class="form">
+      
+      <input type="password" placeholder="Password"/>
+      <hr>
+      <button>Continue</button>
+      
+      <p id="error" class="error hidden">That's not what I have written down.</p>
+  </div>
+  <script src="./Gatekeeper.js"></script>
 </body>
 </html>
