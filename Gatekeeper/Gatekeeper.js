@@ -25,8 +25,8 @@ async function authenticate(password) {
   return null;
 }
 
-document.getElementById("loginBtn").addEventListener("click", async () => {
-    const pw = document.getElementById("pw").value;
+document.getElementById("loginButton").addEventListener("click", async () => {
+    const pw = document.getElementById("passwordInput").value;
     const result = await authenticate(pw);
     
     if (result) {
