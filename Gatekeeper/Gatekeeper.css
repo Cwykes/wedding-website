@@ -3,6 +3,11 @@
 --black: #36454F;
 } 
 
+
+h1 {
+  padding-top: 10rem;
+}
+
 .subtitle {
   margin-top: 0.5rem;
   font-size: 1.1rem;
@@ -28,4 +33,25 @@
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 900px) {
+
+  h1 {
+    margin: 0;
+    font-size: 2rem;
+    padding-top: 1rem;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 5rem;
+  }
+
+    input, button {
+      margin-top: 1rem;
+      font-weight: 400;
+      font-size: 1rem;
+    }
+
 }
