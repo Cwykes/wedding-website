@@ -1,5 +1,15 @@
-const weddingDate = new Date("October 10, 2026 10:00:00").getTime();
+const weddingDate = new Date("October 10, 2026 00:00:00").getTime();
 const countdownEl = document.getElementById("countdown");
+
+document.addEventListener("DOMContentLoaded", () => {
+  const type = requireGuest();
+
+  if (type === "day") {
+    document.getElementById("dayRSVP").style.display = "block";
+  } else if (type === "evening") {
+    document.getElementById("eveningRSVP").style.display = "block";
+  }
+});
 
 function updateCountdown() {
   const now = new Date().getTime();
@@ -17,16 +27,6 @@ function updateCountdown() {
 
   countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const type = requireGuest();
-
-  if (type === "day") {
-    document.getElementById("dayRSVP").style.display = "block";
-  } else if (type === "evening") {
-    document.getElementById("eveningRSVP").style.display = "block";
-  }
-});
 
 function requireGuest() {
   const type = sessionStorage.getItem("guestType");

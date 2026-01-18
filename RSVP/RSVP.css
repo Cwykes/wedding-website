@@ -7,6 +7,12 @@ textarea {
   resize: vertical;
 }
 
+label {
+  margin-top: 1rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
 #guest-dropdown {
   text-align: left;
 }
@@ -72,4 +78,18 @@ footer {
   padding: 1rem;
   font-size: 0.9rem;
   color: var(--black);
+}
+
+@media (max-width: 900px) {
+
+  .guest-category {
+    padding-left: 0.5rem;
+  }
+
+  label, input, select, button, textarea {
+  margin-top: 1rem;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
 }
