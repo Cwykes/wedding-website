@@ -81,15 +81,7 @@ footer {
 }
 
 @media (max-width: 900px) {
-
   .guest-category {
     padding-left: 0.5rem;
   }
-
-  label, input, select, button, textarea {
-  margin-top: 1rem;
-  font-weight: 400;
-  font-size: 1rem;
-}
-
 }
