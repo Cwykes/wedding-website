@@ -11,7 +11,7 @@ body {
   color: var(--black);
   
   background-color: var(--white);
-  background-image: url('../Assets/Form/Botanical-Background-Large.jpeg'); 
+  background-image: url('./Assets/Form/Botanical-Background-Large.jpeg'); 
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -54,7 +54,7 @@ hr {
     backdrop-filter: blur(4px);
 
     max-width: 600px;
-    min-height: 250px;
+    min-height: 225px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -106,10 +106,16 @@ button:hover {
 @media (max-width: 900px) {
 
     body {
-      background-image: url('../Assets/Form/Botanical-Background-mobile2.jpeg');
+      background-image: url('./Assets/Form/Botanical-Background-mobile2.jpeg');
     }
 
     h1 {
       font-size: 2rem;
+    }
+
+    label, input, select, button, textarea {
+      margin-top: 1rem;
+      font-weight: 400;
+      font-size: 1rem;
     }
 }
