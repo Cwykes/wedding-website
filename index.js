@@ -36,5 +36,4 @@ function requireGuest() {
   return type;
 }
 
-
 setInterval(updateCountdown, 1000);

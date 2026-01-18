@@ -3,91 +3,10 @@
 --black: #36454F;
 } 
 
-body {
-  margin: 0;
-  padding: 0;
-  
-  display: flex;  
-  flex-direction: column;
-  justify-content: center;
-  
-  align-items: center;
-  padding: 2rem;
-  text-align: center;
-  animation: floatUp 0.6s ease-out;
-
-  background: var(--white);
-  background-image: url('../Assets/RSVP/Botanical-Background-PC.png'); 
-  background-size: cover;
-  background-position: center;
-  
-  font-family: "Cormorant Garamond", serif;
-  color: var(--black);
-  animation: fadeIn 0.8s ease-out;
-}
-
-/* Smooth fade-in for page load */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-hr {
-  margin: 2rem 2rem;
-  border: none;
-  border-top: 1px solid var(--black);
-  color: var(--black);
-}
-
-h2 {
-  margin: 0;
-  font-size: 2rem;
-  letter-spacing: 0.5px;
-}
-
 .subtitle {
   margin-top: 0.5rem;
   font-size: 1.1rem;
   color: var(--black);
-}
-
-input, button {
-  margin-top: 1.5rem;
-  padding: 0.75rem;
-  border: 0px solid var(--white);
-  border-radius: 40px;
-  font-size: 1rem;
-  text-align: center;
-
-  color: var(--black);
-}
-
-.input {
-  margin-top: 1.4rem;
-  transition: border-color 0.2s ease;
-}
-
-*:focus {
-  outline: none;
-  border-color: 0;
-}
-
-.btn {
-  border-color: var(--black);
-  border-style: solid;
-  background-color: var(--white);
-  cursor: pointer;
-
-  transition: background 0.3s ease;
-}
-
-.btn:hover {
-  background: var(--white);
-  transform: translateY(-2px);
-}
-
-.btn:active {
-  transform: translateY(0);
 }
 
 /*Error*/
@@ -95,10 +14,10 @@ input, button {
   margin-top: 1rem;
   color: #b33;
   font-size: 0.95rem;
-  animation: shake 0.3s ease;
+  animation: shake 0.5s ease;
 }
 
-/* Gentle shake animation for wrong password */
+/*shake animation*/
 @keyframes shake {
   0%   { transform: translateX(0); }
   25%  { transform: translateX(-4px); }

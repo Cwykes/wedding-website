@@ -3,145 +3,73 @@
 --black: #36454F;
 } 
 
-body {
-  font-family: "Crimson Pro", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  background: var(--white);
-  color: var(--black);
-  padding: 2rem;
-  text-align: center;
-
-  background-image: url('../Assets/RSVP/Botanical-Background-PC.png'); 
-  background-size: cover;
-  background-position: center;
-}
-
-h1 {
-  margin: 0;
-  font-size: 4rem;
-  font-family: "Cormorant SC", serif;
-  font-style: normal;
-}
-
-form {
-  max-width: 600px;
-
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-
-  background-color: 0;
-  margin: 2rem auto;
-  padding: 2rem;
-  border-radius: 10px;
-
-  color: var(--black);
-}
-
-hr {
-  margin: 2rem 2rem;
-  border: none;
-  border-top: 1px solid var(--black);
-}
-
-label {
-  margin-top: 1rem;
-  font-weight: 400;
-  font-size: 1.5rem;
-}
-
-input, select, textarea, button {
-  margin-top: 0.5rem;
-  padding: 0.75rem;
-  border: 0px solid var(--white);
-  border-radius: 40px;
-  font-size: 1rem;
-  text-align: center;
-
-  color: var(--black);
-}
-
-*:focus {
-  outline: none;
-  border-color: inherit;
-}
-
-
 textarea {
   resize: vertical;
 }
 
-button {
-  margin-top: 1.5rem;
-  border-color: var(--black);
-  border-style: solid;
-  background-color: var(--white);
-  color: var(--black);
-  font-size: 1.2rem;
-  cursor: pointer;
-  border-radius: 40px;
-  transition: background 0.3s ease;
-}
-
-button:hover {
-background: var(--white);
-}
-
 #guest-dropdown {
-text-align: left;
+  text-align: left;
 }
 
 .guest-category {
-margin-top: 1rem;
-padding-left: 3rem;
-}
-.guest-category button {
-display: block;
-width:  100%;
-margin: 0.25rem 0;
-border-radius: 40px;
-padding: 0.5rem;
-padding-left: 2rem;
-cursor: pointer;
-text-align: left;
+  margin-top: 1rem;
+  padding-left: 3rem;
 
-background-color: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
+
+details[open] > summary {
+  background-color: var(--white);
+}
+
+details summary {
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 10px;
+  transition: background-color 0.4s ease;
+}
+
+.guest-category button {
+  display: block;
+  width:  100%;
+  margin: 0.25rem 0;
+  border-radius: 40px;
+  padding: 0.5rem;
+  padding-left: 2rem;
+  cursor: pointer;
+  text-align: left;
+
+  background-color: 0;
+}
+
 .guest-category button:hover {
-background: var(--white);
+  background: var(--white);
 }
 
 #selection-box {
-margin-top: 1rem;
-padding: 1rem;
-border-radius: 40px;
-text-align: center;
-font-weight: bold;
-display: none; /* hidden until a guest is selected */
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 40px;
+  text-align: center;
+  font-weight: bold;
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+
 }
+
 #selection-box.selected {
-display: block;
-color: #155724;
+  opacity: 1;
+  transform: translateY(0);
+  display: block;
+  color: #155724;
 }
 
 footer {
-text-align: center;
-padding: 1rem;
-font-size: 0.9rem;
-color: var(--black);
-}
-
-
-/* Mobile layout */
-@media (max-width: 900px) {
-
-body {
-  background-image: url('../Assets/RSVP/Botanical-Background-mobile.jpeg');
-}
-
-  h1 {
-  margin: 0;
-  font-size: 3rem;
-}
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: var(--black);
 }
