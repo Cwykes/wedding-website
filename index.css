@@ -97,6 +97,9 @@ body {
 .hero-right {
   flex: 1;
   overflow-y: auto;
+  font-family: "Crimson Pro", serif;
+  color: var(--black);
+
   padding: 2rem;
   background-color: var(--white);
 }
@@ -104,12 +107,9 @@ body {
   margin-bottom: 3rem;
 }
 
-.hero-right section h2 {
+.hero-right section h1, h2 {
   font-family: "Cormorant SC", serif;
-}
-
-.hero-right section p {
-    font-family: "Crimson Pro", serif;
+  color: black;
 }
 
 hr{
@@ -128,20 +128,20 @@ hr{
 .rsvp {
   display: inline-block;
   color: var(--black);
-  Width: auto;
-  border-style: solid;
-  border-width: 2px;
-  border-color: var(--black);
+  background-color: var(--white);
+
+  width: 50%;
+  border: 0px solid var(--black);
+  border-radius: 10px;
+
   padding: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
+
   text-align: center;
-  border-radius: 40px;
   text-decoration: none;
 }
 
 /* Mobile layout */
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
   .split-layout {
     flex-direction: column;
   }
