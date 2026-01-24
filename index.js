@@ -4,11 +4,11 @@ const countdownEl = document.getElementById("countdown");
 document.addEventListener("DOMContentLoaded", () => {
   const type = requireGuest();
 
-  if (type === "day") {
-    document.getElementById("dayRSVP").style.display = "block";
-  } else if (type === "evening") {
-    document.getElementById("eveningRSVP").style.display = "block";
-  }
+  // if (type === "day") {
+  //   document.getElementById("dayRSVP").style.display = "block";
+  // } else if (type === "evening") {
+  //   document.getElementById("eveningRSVP").style.display = "block";
+  // }
 });
 
 function updateCountdown() {
@@ -35,5 +35,30 @@ function requireGuest() {
   }
   return type;
 }
+
+  const btn = document.querySelector('.menu-btn');
+  const sidebar = document.querySelector('.sidebar');
+  const overlay = document.querySelector('.overlay');
+
+  btn.addEventListener('click', () => {
+    toggleNavVisibility();
+  });
+
+  overlay.addEventListener('click', () => {
+    toggleNavVisibility();
+  });
+
+  document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', e => {
+    toggleNavVisibility();
+  });
+});
+
+function toggleNavVisibility() {
+  sidebar.classList.toggle('open');
+  overlay.classList.toggle('show');
+  btn.innerHTML = sidebar.classList.contains('open') ? '✕' : '☰';
+}
+
 
 setInterval(updateCountdown, 1000);
