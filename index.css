@@ -147,19 +147,82 @@ body {
   margin-left: 5rem;
   text-align: left;
   z-index: 1;
+
+  animation: fadeIn 2s ease-out;
 }
 .hero-content h1 {
   font-size: clamp(4rem, 10vw, 7rem);
   font-weight: 400;
   font-family: "Bonheur Royale", cursive;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
+
+/*---------------------------------------------- CountDown*/
+
 .countdown {
-  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--black);
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--accent);
+
+  animation: fadeIn 2s ease-out;
 }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
+.countDown {
+  margin-right: 45px;
+  text-align: center;
+}
+
+.countValue {
+  float: left;
+  width: auto;
+  padding: 1rem;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: var(--white);
+  border-radius: 10px;
+}
+
+.countdown p{
+  float: left;
+  color: var(--white);
+  font-weight: 400;
+}
+
+.flip-x {
+  animation: flipX 0.6s ease forwards;
+  transform-style: preserve-3d;
+}
+
+@keyframes flipX {
+  0% {
+    transform: rotateX(0deg);
+  }
+  49% {
+    transform: rotateX(89deg);
+  }
+  50% {
+    transform: rotateX(90deg);
+  }
+  51% {
+    transform: rotateX(91deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+
+
 
 /*--------------------------------------------- Right scrollable column */
 .hero-right {
@@ -187,10 +250,16 @@ body {
 
 /*------------------------------------ Date Location */
 
-section h1{
+.hero-right section h1{
   text-align: center;
+
+  font-size: 1.5rem;
 }
 
+.hero-right section h2{
+  text-align: center;
+    font-size: 1rem;
+}
 
 #details {
   text-align: center;
@@ -224,10 +293,53 @@ section h1{
     flex-direction: column;
   }
 
+  .countdown {
+    color: var(--black);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .countDown {
+    margin-right: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .seconds{
+    margin-right: 0px;
+  }
+
+  .countValue {
+    padding: 0.5rem;
+    margin-right: 5px;
+    margin-bottom: 10px;
+  }
+
+  .countdown p{
+    font-weight: 400;
+    display: none;
+
+  }
+
   .sidebar {
     width: 200px;
 
     font-size: 1rem;
+  }
+
+  .sidebar li {
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .menu-btn {
+    font-size: 1rem;
+  }
+
+.sidebar hr{
+    margin: 1rem 1rem;
+    margin-top: 0.5rem;
+    border-top: 1px solid var(--black);
   }
   
   .hero-left {
