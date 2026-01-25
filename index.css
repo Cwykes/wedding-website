@@ -53,7 +53,7 @@ body {
 }
 
 .sidebar h1 {
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 
   font-family: "Bonheur Royale", cursive;
   font-size: clamp(2rem, 5vw, 3.5rem);
@@ -193,9 +193,10 @@ body {
 }
 
 .countdown p{
-  float: left;
   color: var(--white);
-  font-weight: 400;
+  font-weight: 500;
+
+  font-family: "Bonheur Royale", cursive;
 }
 
 .flip-x {
@@ -235,7 +236,8 @@ body {
   background-color: var(--white);
 }
 .hero-right section {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .hero-right section h1, h2 {
@@ -248,25 +250,45 @@ body {
   width: 0px;
 }
 
-/*------------------------------------ Date Location */
+/*------------------------------------ Date Location (details) */
 
 .hero-right section h1{
   text-align: center;
-
   font-size: 1.5rem;
 }
 
 .hero-right section h2{
   text-align: center;
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 #details {
   text-align: center;
   align-items: center;
   justify-content: center;
+}
 
+.date{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
 
+.date h1 {
+  margin-top: 0;
+}
+
+.date h2 {
+  margin-bottom: 0;
+}
+
+.address {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.address h2 {
+  font-weight: 400;
+  margin: 0;
 }
 
 .hero-right .rsvp {
@@ -279,6 +301,7 @@ body {
   border-radius: 10px;
 
   padding: 20px;
+  padding-bottom: 0;
 
   text-align: center;
   text-decoration: none;
@@ -286,6 +309,29 @@ body {
   font-size: 2rem;
   font-weight: 300;
 }
+
+/*------------------------------------ Venue */
+.map {
+  height: 450px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.link{
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--black);
+  text-align: center;
+}
+
 
 /* Mobile layout */
 @media (max-width: 900px) {
@@ -316,8 +362,7 @@ body {
   }
 
   .countdown p{
-    font-weight: 400;
-    display: none;
+    font-weight: 500;
 
   }
 
@@ -325,6 +370,10 @@ body {
     width: 200px;
 
     font-size: 1rem;
+  }
+
+  .sidebar h1{
+    margin-top: 0;
   }
 
   .sidebar li {
@@ -336,7 +385,7 @@ body {
     font-size: 1rem;
   }
 
-.sidebar hr{
+  .sidebar hr{
     margin: 1rem 1rem;
     margin-top: 0.5rem;
     border-top: 1px solid var(--black);

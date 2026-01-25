@@ -5,6 +5,8 @@
     <title>Callum & Jade - 2026</title>
     <meta name="description" content="Join us to celebrate our wedding." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,6 +25,7 @@
     <li><a class="nav-link" href="#venue">Venue</a></li>
     <li><a class="nav-link" href="#accomodation">Where To Stay</a></li>
     <li><a class="nav-link" href="#schedule">Order Of The Day</a></li>
+    <li><a class="nav-link" href="#menu">Menu</a></li>
     <li><a class="nav-link" href="#gifts">Gift Registry</a></li>
     <li><a class="nav-link" href="#faq">FAQ</a></li>
   </ul>
@@ -38,31 +41,30 @@
       <h1>Callum & Jade</h1>
       <p>We can't wait to spend our day with you.</p>
 
-
       <div id="countdown" class="countdown">
         <div class="countDown days">
           <div class="countValue" id="days1">0</div>
           <div class="countValue" id="days2">0</div>
           <div class="countValue" id="days3">0</div>
-          <p>d</p>
+          <p>Days</p>
         </div>
 
         <div class="countDown hours">
           <div class="countValue" id="hours1">0</div>
           <div class="countValue" id="hours2">0</div>
-          <p>h</p>
+          <p>Hours</p>
         </div>
 
         <div class="countDown minutes">
           <div class="countValue" id="minutes1">0</div>
           <div class="countValue" id="minutes2">0</div>
-          <p>m</p>
+          <p>Minutes</p>
         </div>
 
         <div class="countDown seconds">
           <div class="countValue" id="seconds1">0</div>
           <div class="countValue" id="seconds2">0</div>
-          <p>s</p>
+          <p>Seconds</p>
         </div>
 
       </div>
@@ -74,12 +76,16 @@
 
   <main class="hero-right">
     <section id="details">
+      <div class="date">
       <h2>Saturday</h2>
       <h1>10th October 2026</h1>
+    </div>
 
-      <h2>Hanbury Barns Wedding Venue,</h2>
-      <h2>Hanbury, Burton-on-Trent,</h2>
-      <h2>DE13 8TN</h2>
+      <div class="address">
+        <h2>Hanbury Barns Wedding Venue,</h2>
+        <h2>Hanbury, Burton-on-Trent,</h2>
+        <h2>DE13 8TN</h2>
+      </div>
       <a class="rsvp" href="./RSVP/RSVP.html">RSVP</a>
     </section>
 
@@ -98,14 +104,31 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
 
     <section id="venue">
       <h1>Venue</h1>
-      <h2>Hanbury Barns, UK</h2>
+      <h2>Hanbury Barns</h2>
+      <p>We are excited to host our wedding at Hanbury Barns, a beautiful and historic venue in the heart of the countryside.</p>
+      <img class="image" src="./Assets/Index/HanburyBarns1.jpeg" alt="Hanbury Barns Venue Image">
+      <img class="image" src="./Assets/Index/HanburyBarns2.jpeg" alt="Hanbury Barns Venue Image">
+      <img class="image" src="./Assets/Index/HanburyBarns3.jpeg" alt="Hanbury Barns Venue Image">
+      <a class="link" href="https://hanburybarns-venue.co.uk/"><p>Click to go to Hanbury Barns</p></a>
+
+      <h2>Location</h2>
+      <div id="map" class="map"></div>
+      <a class="link" href="https://www.google.co.uk/maps/place/Hanbury+Barns+Wedding+Venue/@52.8319731,-1.7721866,15.66z/data=!4m6!3m5!1s0x487a0510c1e838d3:0xdc3c7bf0916c8b2d!8m2!3d52.8332414!4d-1.76668!16s%2Fg%2F11f__j84bh?entry=ttu&g_ep=EgoyMDI2MDEyMS4wIKXMDSoASAFQAw%3D%3D"><p>Click to go to Google Maps</p></a>
     </section>
 
     <hr>
 
     <section id="accomodation">
       <h1>Where To Stay</h1>
-      <h2>Hanbury Barns, UK</h2>
+      <h2>Here is a list of hotels nearby.</h2>
+
+      <div class="accomodation-item">
+        <h3>Hotel 1</h3>
+        <p>Address: 123 Example St, City, Postcode</p>
+        <p>Distance from Venue: 5 miles</p>
+        <a class="link" href="https://www.examplehotel1.com">Visit Hotel 1 Website</a>
+        <img class="image" src="./Assets/Index/HanburyBarns3.jpeg" alt="Hanbury Barns Venue Image">
+      </div>
     </section>
 
     <hr>
@@ -117,17 +140,28 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
 
     <hr>
 
-    <section id="gifts">
-      <h1>Gift Registry</h1>
+    <section id="menu">
+      <h1>Menu</h1>
       <h2>*To Be Announced*</h2>
     </section>
 
     <hr>
-    <section id="faq">…</section>
-    <section id="registry">…</section>
+
+    <section id="gifts">
+      <h1>Gift Registry</h1>
+      <p>No gifts please</p>
+    </section>
+
+    <hr>
+
+    <section id="faq">
+      <h1>FAQ</h1>
+      <h2>*To Be Announced*</h2>
+    </section>
   </main>
 </div>
 
   <script src="./index.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </body>
 </html>
