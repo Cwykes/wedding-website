@@ -24,3 +24,39 @@ document.querySelectorAll("details").forEach((detail) => {
     }
   });
 });
+
+document.getElementById("rsvpForm").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const data = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: { "Accept": "application/json" }
+    });
+
+
+    if (!response.ok) {
+      console.error("Formspree error:", response.statusText);
+      alert("Something went wrong. Please try again.");
+      return;
+    }
+    document.body.innerHTML = `
+      <div style="padding: 2rem; text-align: center;">
+        <h2>Thank you!</h2>
+        <p>Your RSVP has been sent.</p>
+        <p>Redirecting…</p>
+      </div>`;
+
+    setTimeout(() => {
+      window.location.href = "../index.html";
+    }, 1200);
+
+  } catch (err) {
+    console.error("Network error:", err);
+    alert("Unable to send. Please contact support (Callum).");
+  }
+});
