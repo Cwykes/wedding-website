@@ -2,7 +2,26 @@ const weddingDate = new Date("October 10, 2026 00:00:00").getTime();
 const countdown = document.getElementById("countdown");
 
 document.addEventListener("DOMContentLoaded", () => {
+  const type = requireGuest();
 
+  // if (type === "day") {
+  //   document.getElementById("dayRSVP").style.display = "block";
+  // } else if (type === "evening") {
+  //   document.getElementById("eveningRSVP").style.display = "block";
+  // }
+  const venueCoords = [52.8332446, -1.7692549];
+
+  const map = L.map('map').setView(venueCoords, 15);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  L.marker(venueCoords)
+    .addTo(map)
+    .bindPopup("Hanbury Barns Wedding Venue")
+    .openPopup();
 });
 
 function updateCountdown() {
@@ -48,30 +67,6 @@ function updateCountdown() {
   updateCountdownDisplay(document.getElementById("seconds2"), seconds2);
 
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const type = requireGuest();
-
-  // if (type === "day") {
-  //   document.getElementById("dayRSVP").style.display = "block";
-  // } else if (type === "evening") {
-  //   document.getElementById("eveningRSVP").style.display = "block";
-  // }
-  const venueCoords = [52.8332446, -1.7692549];
-
-  const map = L.map('map').setView(venueCoords, 15);
-
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; OpenStreetMap contributors'
-  }).addTo(map);
-
-  L.marker(venueCoords)
-    .addTo(map)
-    .bindPopup("Hanbury Barns Wedding Venue")
-    .openPopup();
-});
-
 
 function updateCountdownDisplay(element, value) {
   if (element.innerHTML != value)

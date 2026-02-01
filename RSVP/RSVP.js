@@ -2,12 +2,17 @@
 function selectGuest(name) {
     document.getElementById('guest').value = name;
     const box = document.getElementById('selection-box');
-    box.textContent = "Selected Guest: " + name;
+    box.innerHTML = "Selected Guest:<br>" + name;
     box.classList.add('selected');
 
     document.querySelectorAll("details[open]").forEach((d) => {
         d.open = false;
     });
+
+    var guestCount = countGuestCount(name);
+
+    const guestCountInput = document.getElementById("guests");
+    guestCountInput.max = guestCount; 
 }
 
 document.querySelectorAll("details").forEach((detail) => {
@@ -60,3 +65,11 @@ document.getElementById("rsvpForm").addEventListener("submit", async function (e
     alert("Unable to send. Please contact support (Callum).");
   }
 });
+
+
+function countGuestCount(str) {
+  const commaCount = (str.match(/,/g) || []).length;
+  const ampersandCount = (str.match(/&/g) || []).length;
+
+  return commaCount + ampersandCount + 1;
+}

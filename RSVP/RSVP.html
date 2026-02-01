@@ -15,73 +15,77 @@
     <h2>Please RSVP below</h2>
     <form action="https://formspree.io/f/mwpgyrzq" method="POST" class="form" id="rsvpForm">
 
-      <label>Select Guest:</label>
-      <div id="guest-dropdown">
-        <details class="guest-category">
-          <summary>Bride</summary>
-          
+      <div id="section-guest-selection" class="section">
+        <label>Select Guest:</label>
+        <div id="guest-dropdown">
           <details class="guest-category">
-            <summary>Family</summary>
-              <button type="button" onclick="selectGuest('Wun Lin & Dave')">Wun Lin & Dave</button>
-              <button type="button" onclick="selectGuest('William & Jo')">William & Jo</button>
-              <button type="button" onclick="selectGuest('Ken & Kelly')">Ken & Kelly</button>
-              <button type="button" onclick="selectGuest('Jon & Michelle')">Jon & Michelle</button>
-              <button type="button" onclick="selectGuest('Jennifer & Doug')">Jennifer & Doug</button>
-          </details>
-
+            <summary>Bride</summary>
+            
             <details class="guest-category">
-              <summary>Friends</summary>
-              <button type="button" onclick="selectGuest('Anna & Kieron')">Anna & Kieron</button>
-              <button type="button" onclick="selectGuest('Fran')">Fran</button>
-              <button type="button" onclick="selectGuest('Maya')">Maya</button>
-            </details>       
-        </details>
-        
-        <details class="guest-category">
-          <summary>Groom</summary>
-          
-          <details class="guest-category">
-            <summary>Family</summary>
-              <button type="button" onclick="selectGuest('Louise')">Louise</button>
-              <button type="button" onclick="selectGuest('Margureet')">Marg</button>
-              <button type="button" onclick="selectGuest('Alan, Kelly & Seren')">Alan, Kelly & Seren</button>
-              <button type="button" onclick="selectGuest('Tony & Debbie')">Tony & Debbie</button>
-              <button type="button" onclick="selectGuest('Finley & Kieran')">Finley & Kieran</button>
-              <button type="button" onclick="selectGuest('Jordan, Ellie & Lucas')">Jordan, Ellie & Lucas</button>
+              <summary>Family</summary>
+                <button type="button" onclick="selectGuest('Wun Lin & Dave')">Wun Lin & Dave</button>
+                <button type="button" onclick="selectGuest('William & Jo')">William & Jo</button>
+                <button type="button" onclick="selectGuest('Ken & Kelly')">Ken & Kelly</button>
+                <button type="button" onclick="selectGuest('Jon & Michelle')">Jon & Michelle</button>
+                <button type="button" onclick="selectGuest('Jennifer & Doug')">Jennifer & Doug</button>
             </details>
 
+              <details class="guest-category">
+                <summary>Friends</summary>
+                <button type="button" onclick="selectGuest('Anna & Kieron')">Anna & Kieron</button>
+                <button type="button" onclick="selectGuest('Fran')">Fran</button>
+                <button type="button" onclick="selectGuest('Maya')">Maya</button>
+              </details>       
+          </details>
+          
+          <details class="guest-category">
+            <summary>Groom</summary>
+            
             <details class="guest-category">
-              <summary>Friends</summary>
-              <button type="button" onclick="selectGuest('Abdi')">Abdi</button>
-              <button type="button" onclick="selectGuest('Lauren')">Lauren</button>
-              <button type="button" onclick="selectGuest('Pedro')">Pedro</button>
-              <button type="button" onclick="selectGuest('Natasha')">Natasha</button>
-            </details>  
-        </details>
+              <summary>Family</summary>
+                <button type="button" onclick="selectGuest('Louise')">Louise</button>
+                <button type="button" onclick="selectGuest('Margureet')">Marg</button>
+                <button type="button" onclick="selectGuest('Alan, Kelly & Seren')">Alan, Kelly & Seren</button>
+                <button type="button" onclick="selectGuest('Tony & Debbie')">Tony & Debbie</button>
+                <button type="button" onclick="selectGuest('Finley & Kieran')">Finley & Kieran</button>
+                <button type="button" onclick="selectGuest('Jordan, Ellie & Lucas')">Jordan, Ellie & Lucas</button>
+              </details>
+
+              <details class="guest-category">
+                <summary>Friends</summary>
+                <button type="button" onclick="selectGuest('Abdi')">Abdi</button>
+                <button type="button" onclick="selectGuest('Lauren')">Lauren</button>
+                <button type="button" onclick="selectGuest('Pedro')">Pedro</button>
+                <button type="button" onclick="selectGuest('Natasha')">Natasha</button>
+              </details>  
+          </details>
+        </div>     
+        <div id="selection-box">
+        </div>   
+        <hr>
       </div>
 
-      <div id="selection-box"></div>
-      
-      <hr>
+      <div id="section-attendance" class="section">
+        <label for="attendance">Will you be attending?</label>
+        <select id="attendance" name="attendance" required>
+          <option value="">-- Please select --</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+        <hr>
+      </div>
 
-      <label for="attendance">Will you be attending?</label>
-      <select id="attendance" name="attendance" required>
-        <option value="">-- Please select --</option>
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
-      </select>
+      <div id="section-attendance" class="section">
+        <label for="guests">How many will be attending?</label>
+        <input type="number" id="guests" name="guests" min="1" max="10" required>
+        <hr>
+      </div>
 
-      <hr>
-
-      <label for="guests">How many will be attending?</label>
-      <input type="number" id="guests" name="guests" min="1" max="10" required>
-
-      <hr>
-
-      <label for="message">Leave us a message:</label>
-      <textarea id="message" name="message" rows="4" placeholder=""></textarea>
-
-      <hr>
+      <div id="section-message" class="section">
+        <label for="message">Leave us a message:</label>
+        <textarea id="message" name="message" rows="4" placeholder=""></textarea>
+        <hr>
+      </div>
 
       <button type="submit">Send RSVP</button>
       
