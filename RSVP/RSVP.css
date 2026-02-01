@@ -17,6 +17,12 @@ label {
   text-align: left;
 }
 
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
 .guest-category {
   margin-top: 1rem;
   padding-left: 3rem;
@@ -56,21 +62,23 @@ details summary {
 #selection-box {
   margin-top: 1rem;
   padding: 1rem;
-  border-radius: 40px;
+  padding-bottom: 0;
   text-align: center;
-  font-weight: bold;
+  font-family: "Bonheur Royale", cursive;
+  font-size: 1.5rem;
 
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.4s ease, transform 0.4s ease;
 
+  display: none;
 }
 
 #selection-box.selected {
   opacity: 1;
   transform: translateY(0);
   display: block;
-  color: #155724;
+  color: var(--black)
 }
 
 footer {
