@@ -1,3 +1,17 @@
+const RSVPForm = document.getElementById("rsvpForm"),
+      guestInput = document.getElementById("guest"),
+      attendanceInput = document.getElementById("attendance"),
+      guestCountInput = document.getElementById("guests");
+
+function _bindEvents(){
+  RSVPForm.addEventListener("submit", _OnSubmitAsync);
+  attendanceInput.addEventListener("change", _OnAttendanceChange);
+}
+
+function init(){
+  _bindEvents();
+}
+init();
 
 function selectGuest(name) {
     document.getElementById('guest').value = name;
@@ -13,24 +27,23 @@ function selectGuest(name) {
 
     const guestCountInput = document.getElementById("guests");
     guestCountInput.max = guestCount; 
+
+    const attendanceSection = document.getElementById("section-attendance");
+    attendanceSection.classList.remove("hidden");
 }
 
-document.querySelectorAll("details").forEach((detail) => {
-  detail.addEventListener("toggle", function () {
-    if (this.open) {
-      const section = this.querySelector(":scope > *:not(summary)");
-      if (section) {
-        section.style.opacity = 0;
-        section.style.transition = "opacity 0.3s ease";
-        requestAnimationFrame(() => {
-          section.style.opacity = 1;
-        });
-      }
-    }
-  });
-});
+function _OnAttendanceChange() {
+  if (attendanceInput.value === "yes") {
+    const guestCountSection = document.getElementById("section-guest-count");
+    guestCountSection.classList.remove("hidden");
+  }
+  else{
+    const guestCountSection = document.getElementById("section-guest-count");
+    guestCountSection.classList.add("hidden");
+  }
+}
 
-document.getElementById("rsvpForm").addEventListener("submit", async function (e) {
+async function _OnSubmitAsync(e) {
   e.preventDefault();
 
   const form = e.target;
@@ -62,10 +75,9 @@ document.getElementById("rsvpForm").addEventListener("submit", async function (e
 
   } catch (err) {
     console.error("Network error:", err);
-    alert("Unable to send. Please contact support (Callum).");
+    alert("Unable to send. Please contact support (Which is Callum).");
   }
-});
-
+}
 
 function countGuestCount(str) {
   const commaCount = (str.match(/,/g) || []).length;

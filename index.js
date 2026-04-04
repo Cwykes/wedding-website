@@ -3,12 +3,8 @@ const countdown = document.getElementById("countdown");
 
 document.addEventListener("DOMContentLoaded", () => {
   const type = requireGuest();
+  applyGuestTypeVisibility(type);
 
-  // if (type === "day") {
-  //   document.getElementById("dayRSVP").style.display = "block";
-  // } else if (type === "evening") {
-  //   document.getElementById("eveningRSVP").style.display = "block";
-  // }
   const venueCoords = [52.8332446, -1.7692549];
 
   const map = L.map('map').setView(venueCoords, 15);
@@ -30,6 +26,7 @@ function updateCountdown() {
 
   if (distance < 0) {
     countdown.innerHTML = "It's Wedding Day! 🎉";
+    countdown.style.color = "white";
     return;
   }
 
@@ -89,6 +86,22 @@ function requireGuest() {
   return type;
 }
 
+function applyGuestTypeVisibility(guestType) {
+  const allGuestElements = document.querySelectorAll('[data-guest-type]');
+  
+  allGuestElements.forEach(element => {
+    const allowedTypes = element.getAttribute('data-guest-type').split(',').map(t => t.trim());
+    
+    if (allowedTypes.includes(guestType)) {
+      element.classList.remove('hidden');
+      element.style.display = '';
+    } else {
+      element.classList.add('hidden');
+      element.style.display = 'none';
+    }
+  });
+}
+
   const btn = document.querySelector('.menu-btn');
   const sidebar = document.querySelector('.sidebar');
   const overlay = document.querySelector('.overlay');
@@ -104,6 +117,17 @@ function requireGuest() {
   document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', e => {
     toggleNavVisibility();
+  });
+});
+
+document.querySelectorAll('[data-href]').forEach(button => {
+  button.addEventListener('click', function() {
+    const href = this.getAttribute('data-href');
+    if (href.startsWith('http')) {
+      window.open(href, '_blank');
+    } else {
+      window.location.href = href;
+    }
   });
 });
 
