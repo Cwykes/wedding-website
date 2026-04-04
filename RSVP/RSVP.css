@@ -13,6 +13,10 @@ label {
   font-size: 1.5rem;
 }
 
+.h2 {
+  font-weight: 400;
+}
+
 #guest-dropdown {
   text-align: left;
 }
@@ -31,16 +35,40 @@ label {
   transition: all 0.3s ease;
 }
 
+.hidden {
+  display: none;
+}
+
 details[open] > summary {
   background-color: var(--white);
 }
 
 details summary {
+  list-style: none;
   cursor: pointer;
   padding: 0.5rem;
+  position: relative;
+  padding-left: 1rem;
   border-radius: 10px;
   transition: background-color 0.4s ease;
 }
+
+details > summary::before {
+  content: "+ ";
+  left: 0;
+  top: 0;
+  transition: transform 0.2s ease;
+  font-size: 1rem;
+}
+
+details[open] > summary::before {
+  content: "- ";
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
 
 .guest-category button {
   display: block;

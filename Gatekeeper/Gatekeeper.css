@@ -14,7 +14,6 @@ h1 {
   color: var(--black);
 }
 
-/*Error*/
 .error {
   margin-top: 1rem;
   color: #b33;
@@ -22,7 +21,6 @@ h1 {
   animation: shake 0.5s ease;
 }
 
-/*shake animation*/
 @keyframes shake {
   0%   { transform: translateX(0); }
   25%  { transform: translateX(-4px); }

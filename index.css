@@ -7,6 +7,10 @@ html{
   scroll-behavior: smooth;
 }
 
+.hidden {
+  display: none !important;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -15,10 +19,55 @@ body {
 
 .split-layout {
   display: flex;
+  flex-direction: row;
   min-height: 100vh;
 }
 
 
+
+/*------------------------------------ Buttons */
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-rsvp {
+  color: var(--black);
+  background-color: var(--white);
+  border: 2px solid var(--black);
+  padding: 0rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 300;
+  display: inline-block;
+  border-radius: 25px;
+}
+
+.btn-link {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+  text-align: center;
+  background-color: var(--black);
+  padding: 0rem 2rem;
+  border-radius: 25px;
+}
 
 /*------------------------------------ Navigation Menu */
 .menu-btn {
@@ -131,6 +180,8 @@ body {
   align-items: center;
   justify-content: center;
   color: var(--white);
+  flex-shrink: 0;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
 }
 .hero-overlay {
   position: absolute;
@@ -222,13 +273,11 @@ body {
   }
 }
 
-
-
-
 /*--------------------------------------------- Right scrollable column */
 .hero-right {
   flex: 1;
   overflow-y: auto;
+  overflow-x: hidden;
   font-family: "Crimson Pro", serif;
   color: var(--black);
 
@@ -236,8 +285,23 @@ body {
   background-color: var(--white);
 }
 .hero-right section {
+  text-align: center;
   margin-bottom: 2rem;
   margin-top: 2rem;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-right section p {
+  text-align: left;
+}
+
+#details p {
+  text-align: center;
 }
 
 .hero-right section h1, h2 {
@@ -245,7 +309,7 @@ body {
   color: black;
 }
 
-.hero-right hr {
+.vertical-seperator {
   height: 5rem;
   width: 0px;
 }
@@ -264,8 +328,6 @@ body {
 
 #details {
   text-align: center;
-  align-items: center;
-  justify-content: center;
 }
 
 .date{
@@ -312,9 +374,14 @@ body {
 
 /*------------------------------------ Venue */
 .map {
-  height: 450px;
   width: 100%;
+  aspect-ratio: 16/9;
   border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.venue-images {
+  text-align: center;
 }
 
 .image {
@@ -322,18 +389,101 @@ body {
   height: auto;
   border-radius: 10px;
   margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.link{
-  text-decoration: none;
-  font-size: 2rem;
-  font-weight: 300;
-  color: var(--black);
+/*------------------------------------ Accomodation */
+
+.horizontal-seperator {
+  width: 100%;
+  margin: 1rem 0;
+  border: none;
+  border-top: 1px solid var(--black);
+}
+
+.accomodation-item {
   text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.accomodation-item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.accomodation-item h3 {
+  padding: 1rem 1.5rem 0.5rem 1.5rem;
+  margin: 0;
+}
+
+.accomodation-item p {
+  padding: 0 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.accomodation-item button {
+  padding : 0.5rem 1rem;
+}
+
+/*------------------------------------ Schedule */
+
+.schedule-list {
+  list-style: none;
+  padding: 0;
+}
+
+.schedule-list li {
+  margin-bottom: 1rem;
+}
+
+.schedule-list li:not(:last-child)::after {
+  content: "◆";
+  display: block;
+  text-align: center;
+  margin: 0.75rem 0;
+  font-size: 0.75rem;
+  color: var(--black);
+}
+
+@media (max-width: 1600px) and (  min-width: 900px) {
+
+  .countdown {
+    font-size: 1rem;
+    justify-content: left;
+    font-weight: 600;
+  }
+
+  .countDown {
+    margin-right: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .seconds{
+    margin-right: 0px;
+  }
+
+  .countValue {
+    padding: 0.5rem;
+    margin-right: 5px;
+    margin-bottom: 10px;
+  }
+
+  .countdown p{
+    font-weight: 500;
+  }
 }
 
 
-/* Mobile layout */
+
+/*------------------------------------ Mobile layout */
 @media (max-width: 900px) {
   .split-layout {
     flex-direction: column;
@@ -393,14 +543,12 @@ body {
   
   .hero-left {
     position: relative;
-    height: auto;
-    min-height: 60vh;
+    min-height: 100vh;
   }
 
   .hero-content {
     position: absolute;
     bottom: 1rem;
-    left: auto;
     margin-left: auto;
     text-align: center;
     padding: 2rem 1rem;
@@ -409,5 +557,9 @@ body {
   .hero-right {
     overflow: visible;
     padding: 1rem;
+  }
+
+  .image {
+    width: 90%;
   }
 }
