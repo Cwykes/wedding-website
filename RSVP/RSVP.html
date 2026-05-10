@@ -17,49 +17,66 @@
 
       <div id="section-guest-selection" class="section">
         <label>Select Guest:</label>
-        <div id="guest-dropdown">
-          <details class="guest-category">
-            <summary>Bride</summary>
-            
+        
+        <!-- Day Guests -->
+        <div data-guest-type="day">
+          <div id="guest-dropdown">
             <details class="guest-category">
-              <summary>Family</summary>
-                <button type="button" onclick="selectGuest('Wun Lin & Dave')">Wun Lin & Dave</button>
-                <button type="button" onclick="selectGuest('William & Jo')">William & Jo</button>
-                <button type="button" onclick="selectGuest('Ken & Kelly')">Ken & Kelly</button>
-                <button type="button" onclick="selectGuest('Jon & Michelle')">Jon & Michelle</button>
-                <button type="button" onclick="selectGuest('Jennifer & Doug')">Jennifer & Doug</button>
-            </details>
-
+              <summary>Bride</summary>
+              
               <details class="guest-category">
-                <summary>Friends</summary>
-                <button type="button" onclick="selectGuest('Anna & Kieron')">Anna & Kieron</button>
-                <button type="button" onclick="selectGuest('Fran')">Fran</button>
-                <button type="button" onclick="selectGuest('Maya')">Maya</button>
-              </details>       
-          </details>
-          
-          <details class="guest-category">
-            <summary>Groom</summary>
-            
-            <details class="guest-category">
-              <summary>Family</summary>
-                <button type="button" onclick="selectGuest('Louise')">Louise</button>
-                <button type="button" onclick="selectGuest('Margureet')">Marg</button>
-                <button type="button" onclick="selectGuest('Alan, Kelly & Seren')">Alan, Kelly & Seren</button>
-                <button type="button" onclick="selectGuest('Tony & Debbie')">Tony & Debbie</button>
-                <button type="button" onclick="selectGuest('Finley & Kieran')">Finley & Kieran</button>
-                <button type="button" onclick="selectGuest('Jordan, Ellie & Lucas')">Jordan, Ellie & Lucas</button>
+                <summary>Family</summary>
+                  <button type="button" onclick="selectGuest('Wun Lin & Dave')">Wun Lin & Dave</button>
+                  <button type="button" onclick="selectGuest('William & Jo')">William & Jo</button>
+                  <button type="button" onclick="selectGuest('Ken & Kelly')">Ken & Kelly</button>
+                  <button type="button" onclick="selectGuest('Jon & Michelle')">Jon & Michelle</button>
+                  <button type="button" onclick="selectGuest('Jennifer & Doug')">Jennifer & Doug</button>
               </details>
 
+                <details class="guest-category">
+                  <summary>Friends</summary>
+                  <button type="button" onclick="selectGuest('Anna & Kieron')">Anna & Kieron</button>
+                  <button type="button" onclick="selectGuest('Fran')">Fran</button>
+                  <button type="button" onclick="selectGuest('Maya')">Maya</button>
+                </details>       
+            </details>
+            
+            <details class="guest-category">
+              <summary>Groom</summary>
+              
               <details class="guest-category">
-                <summary>Friends</summary>
-                <button type="button" onclick="selectGuest('Abdi')">Abdi</button>
-                <button type="button" onclick="selectGuest('Lauren')">Lauren</button>
-                <button type="button" onclick="selectGuest('Pedro')">Pedro</button>
-                <button type="button" onclick="selectGuest('Natasha')">Natasha</button>
-              </details>  
-          </details>
-        </div>     
+                <summary>Family</summary>
+                  <button type="button" onclick="selectGuest('Louise')">Louise</button>
+                  <button type="button" onclick="selectGuest('Margureet')">Marg</button>
+                  <button type="button" onclick="selectGuest('Alan, Kelly & Seren')">Alan, Kelly & Seren</button>
+                  <button type="button" onclick="selectGuest('Tony & Debbie')">Tony & Debbie</button>
+                  <button type="button" onclick="selectGuest('Finley & Kieran')">Finley & Kieran</button>
+                  <button type="button" onclick="selectGuest('Jordan, Ellie & Lucas')">Jordan, Ellie & Lucas</button>
+                </details>
+
+                <details class="guest-category">
+                  <summary>Friends</summary>
+                  <button type="button" onclick="selectGuest('Abdi')">Abdi</button>
+                  <button type="button" onclick="selectGuest('Lauren')">Lauren</button>
+                  <button type="button" onclick="selectGuest('Pedro')">Pedro</button>
+                  <button type="button" onclick="selectGuest('Natasha')">Natasha</button>
+                </details>  
+            </details>
+          </div>
+        </div>
+
+        <!-- Evening Guests -->
+        <div data-guest-type="evening" class="hidden">
+          <div id="guest-dropdown-evening">
+            <details class="guest-category">
+              <summary>Evening Guests</summary>
+              <button type="button" onclick="selectGuest('Evening Guest 1')">Evening Guest 1</button>
+              <button type="button" onclick="selectGuest('Evening Guest 2')">Evening Guest 2</button>
+              <!-- Add your evening guests here -->
+            </details>
+          </div>
+        </div>
+             
         <div id="selection-box">
         </div>   
         <hr>
@@ -78,6 +95,22 @@
       <div id="section-guest-count" class="section hidden">
         <label for="guests">How many will be attending?</label>
         <input type="number" id="guests" name="guests" min="1" max="10" required>
+        <hr>
+      </div>
+
+      <div id="section-allergies" class="section hidden">
+        <label for="allergies">Food Allergies/Dietary Requirements:</label>
+        <select id="allergies" name="allergies" required>
+          <option value="">-- Please select --</option>
+          <option value="none">None</option>
+          <option value="vegetarian">Vegetarian</option>
+          <option value="vegan">Vegan</option>
+          <option value="gluten-free">Gluten Free</option>
+          <option value="dairy-free">Dairy Free</option>
+          <option value="nut-allergy">Nut Allergy</option>
+          <option value="shellfish-allergy">Shellfish Allergy</option>
+          <option value="other">Other (please specify in message)</option>
+        </select>
         <hr>
       </div>
 

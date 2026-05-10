@@ -5,6 +5,7 @@
 
 html{
   scroll-behavior: smooth;
+  background-color: var(--white);
 }
 
 .hidden {
@@ -289,11 +290,13 @@ body {
   margin-bottom: 2rem;
   margin-top: 2rem;
   width: 75%;
+  min-height: 100vh;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .hero-right section p {
@@ -375,7 +378,8 @@ body {
 /*------------------------------------ Venue */
 .map {
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 16/7;
+  min-height: 500px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -561,5 +565,10 @@ body {
 
   .image {
     width: 90%;
+  }
+
+  .map {
+    aspect-ratio: 16/9;
+    min-height: 400px;
   }
 }

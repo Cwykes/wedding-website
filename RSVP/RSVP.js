@@ -9,9 +9,29 @@ function _bindEvents(){
 }
 
 function init(){
+  const guestType = sessionStorage.getItem("guestType");
+  applyGuestTypeVisibility(guestType);
   _bindEvents();
 }
-init();
+
+document.addEventListener("DOMContentLoaded", init);
+
+function applyGuestTypeVisibility(guestType) {
+  // Get all elements marked with data-guest-type attribute
+  const allGuestElements = document.querySelectorAll('[data-guest-type]');
+  
+  allGuestElements.forEach(element => {
+    const allowedTypes = element.getAttribute('data-guest-type').split(',').map(t => t.trim());
+    
+    if (allowedTypes.includes(guestType)) {
+      element.classList.remove('hidden');
+      element.style.display = '';
+    } else {
+      element.classList.add('hidden');
+      element.style.display = 'none';
+    }
+  });
+}
 
 function selectGuest(name) {
     document.getElementById('guest').value = name;
@@ -36,10 +56,16 @@ function _OnAttendanceChange() {
   if (attendanceInput.value === "yes") {
     const guestCountSection = document.getElementById("section-guest-count");
     guestCountSection.classList.remove("hidden");
+
+    const allergySection = document.getElementById("section-allergies");
+    allergySection.classList.remove("hidden");
   }
   else{
     const guestCountSection = document.getElementById("section-guest-count");
     guestCountSection.classList.add("hidden");
+
+    const allergySection = document.getElementById("section-allergies");
+    allergySection.classList.add("hidden");
   }
 }
 

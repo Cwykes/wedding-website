@@ -14,6 +14,14 @@ h1 {
   color: var(--black);
 }
 
+#passwordInput {
+    font-size: 1.5rem;
+}
+
+hr{
+  margin-top: 0rem;
+}
+
 .error {
   margin-top: 1rem;
   color: #b33;
