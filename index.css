@@ -576,16 +576,16 @@ body {
 @media (max-width: 500px) {
   .hero-content {
     bottom: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-left: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     text-align: center;
     padding: 0 1rem;
-    width: 100%;
+    max-width: 90vw;
   }
 
   .hero-content h1 {
-    font-size: clamp(1.5rem, 12vw, 3.5rem);
+    font-size: clamp(2rem, 14vw, 4rem);
   }
 
   .hero-content p {
