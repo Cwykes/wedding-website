@@ -30,9 +30,7 @@ label {
 .guest-category {
   margin-top: 1rem;
   padding-left: 3rem;
-
   overflow: hidden;
-  transition: all 0.3s ease;
 }
 
 .hidden {
