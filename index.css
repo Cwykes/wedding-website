@@ -5,6 +5,7 @@
 
 html{
   scroll-behavior: smooth;
+  background-color: var(--white);
 }
 
 .hidden {
@@ -289,11 +290,13 @@ body {
   margin-bottom: 2rem;
   margin-top: 2rem;
   width: 75%;
+  min-height: 100vh;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .hero-right section p {
@@ -375,7 +378,8 @@ body {
 /*------------------------------------ Venue */
 .map {
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 16/7;
+  min-height: 500px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -484,7 +488,7 @@ body {
 
 
 /*------------------------------------ Mobile layout */
-@media (max-width: 900px) {
+@media (max-width: 900px){
   .split-layout {
     flex-direction: column;
   }
@@ -562,4 +566,45 @@ body {
   .image {
     width: 90%;
   }
+
+  .map {
+    aspect-ratio: 16/9;
+    min-height: 400px;
+  }
 }
+
+@media (max-width: 500px) {
+  .hero-content {
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+    text-align: center;
+    padding: 0 1rem;
+    width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(1.5rem, 12vw, 3.5rem);
+  }
+
+  .hero-content p {
+    font-size: clamp(0.9rem, 4vw, 1.5rem);
+  }
+
+  .countdown {
+    font-size: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .countValue {
+    padding: 0.5rem;
+    margin-right: 5px;
+    margin-bottom: 10px;
+  }
+
+  .countDown {
+    margin-right: 8px;
+  }
+}
+

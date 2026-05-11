@@ -10,15 +10,33 @@ h1 {
 
 .subtitle {
   margin-top: 0.5rem;
-  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
   color: var(--black);
+  opacity: 0.85;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+}
+
+#passwordInput {
+    font-size: 1.25rem;
+    background-color: transparent;
+}
+
+hr{
+  margin-top: 0rem;
 }
 
 .error {
-  margin-top: 1rem;
-  color: #b33;
-  font-size: 0.95rem;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1rem;
+  color: #8b0000;
+  background: rgba(139, 0, 0, 0.08);
+  border-radius: 6px;
+  font-size: 0.9rem;
   animation: shake 0.5s ease;
+  border-bottom: 3px solid #8b0000;
 }
 
 @keyframes shake {
