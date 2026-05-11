@@ -17,7 +17,6 @@ function init(){
 document.addEventListener("DOMContentLoaded", init);
 
 function applyGuestTypeVisibility(guestType) {
-  // Get all elements marked with data-guest-type attribute
   const allGuestElements = document.querySelectorAll('[data-guest-type]');
   
   allGuestElements.forEach(element => {
@@ -36,7 +35,7 @@ function applyGuestTypeVisibility(guestType) {
 function selectGuest(name) {
     document.getElementById('guest').value = name;
     const box = document.getElementById('selection-box');
-    box.innerHTML = "Selected Guest:<br>" + name;
+    box.innerHTML = name;
     box.classList.add('selected');
 
     document.querySelectorAll("details[open]").forEach((d) => {

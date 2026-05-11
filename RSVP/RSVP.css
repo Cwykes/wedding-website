@@ -43,6 +43,12 @@ details[open] > summary {
   background-color: var(--white);
 }
 
+#attendance, #guests, #allergies, #message {
+    font-family: "Bonheur Royale", cursive;
+    font-size: 1.5rem;
+    background-color: transparent;
+}
+
 details summary {
   list-style: none;
   cursor: pointer;

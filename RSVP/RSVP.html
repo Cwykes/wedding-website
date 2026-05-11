@@ -11,12 +11,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bonheur+Royale&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Callum & Jade's Wedding</h1>
-    <h2>Please RSVP below</h2>
+    <header>
+      <h1>Callum & Jade's Wedding</h1>
+      <h2 class="subtitle" >Please RSVP below</h2>
+    </header>
     <form action="https://formspree.io/f/mwpgyrzq" method="POST" class="form" id="rsvpForm">
 
       <div id="section-guest-selection" class="section">
-        <label>Select Guest:</label>
+        <label>Select a Guest:</label>
         
         <!-- Day Guests -->
         <div data-guest-type="day">
@@ -85,7 +87,7 @@
       <div id="section-attendance" class="section hidden">
         <label for="attendance">Will you be attending?</label>
         <select id="attendance" name="attendance" required>
-          <option value="">-- Please select --</option>
+          <option value="">Please select</option>
           <option value="yes">Yes</option>
           <option value="no">No</option>
         </select>
@@ -101,7 +103,7 @@
       <div id="section-allergies" class="section hidden">
         <label for="allergies">Food Allergies/Dietary Requirements:</label>
         <select id="allergies" name="allergies" required>
-          <option value="">-- Please select --</option>
+          <option value="">Please select</option>
           <option value="none">None</option>
           <option value="vegetarian">Vegetarian</option>
           <option value="vegan">Vegan</option>
