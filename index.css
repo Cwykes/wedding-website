@@ -229,7 +229,7 @@ body {
 }
 
 
-.countDown {
+.count-down-item {
   margin-right: 45px;
   text-align: center;
 }
@@ -464,7 +464,7 @@ body {
     font-weight: 600;
   }
 
-  .countDown {
+  .count-down-item {
     margin-right: 10px;
     align-items: center;
     text-align: center;
@@ -499,7 +499,7 @@ body {
     font-weight: 600;
   }
 
-  .countDown {
+  .count-down-item {
     margin-right: 10px;
     align-items: center;
     text-align: center;
@@ -603,7 +603,7 @@ body {
     margin-bottom: 10px;
   }
 
-  .countDown {
+  .count-down-item {
     margin-right: 8px;
   }
 }

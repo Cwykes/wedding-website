@@ -49,22 +49,27 @@ function selectGuest(name) {
 
     const attendanceSection = document.getElementById("section-attendance");
     attendanceSection.classList.remove("hidden");
+    document.getElementById("attendance").required = true;
 }
 
 function _OnAttendanceChange() {
   if (attendanceInput.value === "yes") {
     const guestCountSection = document.getElementById("section-guest-count");
     guestCountSection.classList.remove("hidden");
+    document.getElementById("guests").required = true;
 
     const allergySection = document.getElementById("section-allergies");
     allergySection.classList.remove("hidden");
+    document.getElementById("allergies").required = true;
   }
   else{
     const guestCountSection = document.getElementById("section-guest-count");
     guestCountSection.classList.add("hidden");
+    document.getElementById("guests").required = false;
 
     const allergySection = document.getElementById("section-allergies");
     allergySection.classList.add("hidden");
+    document.getElementById("allergies").required = false;
   }
 }
 
