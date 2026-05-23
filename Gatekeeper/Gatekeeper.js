@@ -1,5 +1,5 @@
-const DAY_HASH = "8f2364e11b8be3ff008f32b3dedb54e659362429bcc9e3eb6acb6070de4ffbff";
-const EVENING_HASH = "458c1fed574354042397e664d6dabe58415c8ab629f052db5723fb42b490d280";
+const DAY_HASH = "ae1e648dfaf17c4a6648506fdc947dc4bbe6da93e51dd785cd66e962902afb00";
+const EVENING_HASH = "2ad9d4b50ea01f9bd9216a77c9eab4af5f25f84304d2f5c2088b12f01211c33f";
 
 async function hash(input) {
   const encode = new TextEncoder().encode(input);

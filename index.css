@@ -456,6 +456,93 @@ body {
   color: var(--black);
 }
 
+/*------------------------------------ Menu */
+.menu-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.menu-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  font-family: "Cormorant SC", serif;
+  border-bottom: 2px solid var(--black);
+  padding-bottom: 1rem;
+}
+
+.menu-course {
+  margin-bottom: 2rem;
+}
+
+.course-title {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--black);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: "Cormorant SC", serif;
+  border-bottom: 1px solid rgba(54, 69, 79, 0.2);
+  padding-bottom: 0.75rem;
+}
+
+.menu-item {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px dotted rgba(54, 69, 79, 0.2);
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.menu-item h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  font-family: "Cormorant SC", serif;
+  color: var(--black);
+}
+
+.menu-item p {
+  margin: 0;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: rgba(54, 69, 79, 0.8);
+  line-height: 1.5;
+}
+
+.menu-item-side {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dotted rgba(54, 69, 79, 0.2);
+  text-align: center !important;
+}
+
+.menu-item-side::before {
+  content: "◆";
+  display: block;
+  text-align: center;
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
+  color: var(--black);
+}
+
+.menu-item-side p {
+  font-size: 0.95rem;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--black);
+  text-align: center !important;
+}
+
+.menu-course .menu-item:first-of-type {
+  margin-top: 1rem;
+}
+
 @media (max-width: 1600px) and (  min-width: 900px) {
 
   .countdown {
