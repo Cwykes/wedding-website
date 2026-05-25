@@ -12,6 +12,7 @@ async function hash(input) {
 async function authenticate(password) {
   const hashed = await hash(password);
 
+  //All trespassers will be shot. You have been warned. 
   if (hashed === DAY_HASH) {
     sessionStorage.setItem("guestType", "day");
     return "day";
