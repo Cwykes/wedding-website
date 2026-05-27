@@ -1,11 +1,15 @@
 const RSVPForm = document.getElementById("rsvpForm"),
       guestInput = document.getElementById("guest"),
       attendanceInput = document.getElementById("attendance"),
-      guestCountInput = document.getElementById("guests");
+      guestCountInput = document.getElementById("guests"),
+      allergiesCheckboxes = document.querySelectorAll('input[name="allergies-item"]');
 
 function _bindEvents(){
   RSVPForm.addEventListener("submit", _OnSubmitAsync);
   attendanceInput.addEventListener("change", _OnAttendanceChange);
+  allergiesCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener("change", _updateAllergiesValue);
+  });
 }
 
 function init(){
@@ -60,7 +64,6 @@ function _OnAttendanceChange() {
 
     const allergySection = document.getElementById("section-allergies");
     allergySection.classList.remove("hidden");
-    document.getElementById("allergies").required = true;
   }
   else{
     const guestCountSection = document.getElementById("section-guest-count");
@@ -69,12 +72,29 @@ function _OnAttendanceChange() {
 
     const allergySection = document.getElementById("section-allergies");
     allergySection.classList.add("hidden");
-    document.getElementById("allergies").required = false;
   }
+}
+
+function _updateAllergiesValue() {
+  const selectedAllergies = Array.from(allergiesCheckboxes)
+    .filter(checkbox => checkbox.checked)
+    .map(checkbox => checkbox.value);
+  
+  document.getElementById("allergies").value = selectedAllergies.join(", ");
 }
 
 async function _OnSubmitAsync(e) {
   e.preventDefault();
+
+  // Validate that at least one allergy is selected if showing the allergy section
+  const allergySection = document.getElementById("section-allergies");
+  if (!allergySection.classList.contains("hidden")) {
+    const anyChecked = Array.from(allergiesCheckboxes).some(checkbox => checkbox.checked);
+    if (!anyChecked) {
+      alert("Please select at least one dietary requirement option.");
+      return;
+    }
+  }
 
   const form = e.target;
   const data = new FormData(form);
