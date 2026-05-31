@@ -10,6 +10,13 @@ function _bindEvents(){
   allergiesCheckboxes.forEach(checkbox => {
     checkbox.addEventListener("change", _updateAllergiesValue);
   });
+
+  document.querySelectorAll('[data-guest]').forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      selectGuest(button.dataset.guest);
+    });
+  });
 }
 
 function init(){
@@ -19,22 +26,6 @@ function init(){
 }
 
 document.addEventListener("DOMContentLoaded", init);
-
-function applyGuestTypeVisibility(guestType) {
-  const allGuestElements = document.querySelectorAll('[data-guest-type]');
-  
-  allGuestElements.forEach(element => {
-    const allowedTypes = element.getAttribute('data-guest-type').split(',').map(t => t.trim());
-    
-    if (allowedTypes.includes(guestType)) {
-      element.classList.remove('hidden');
-      element.style.display = '';
-    } else {
-      element.classList.add('hidden');
-      element.style.display = 'none';
-    }
-  });
-}
 
 function selectGuest(name) {
     document.getElementById('guest').value = name;
@@ -98,20 +89,27 @@ async function _OnSubmitAsync(e) {
 
   const form = e.target;
   const data = new FormData(form);
+  const submitButton = form.querySelector('button[type="submit"]');
+  const originalText = submitButton.textContent;
 
   try {
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending...";
+
     const response = await fetch(form.action, {
       method: "POST",
       body: data,
       headers: { "Accept": "application/json" }
     });
 
-
     if (!response.ok) {
       console.error("Formspree error:", response.statusText);
       alert("Something went wrong. Please try again.");
+      submitButton.disabled = false;
+      submitButton.textContent = originalText;
       return;
     }
+
     document.body.innerHTML = `
       <div style="padding: 2rem; text-align: center;">
         <h2>Thank you!</h2>
@@ -126,6 +124,8 @@ async function _OnSubmitAsync(e) {
   } catch (err) {
     console.error("Network error:", err);
     alert("Unable to send. Please contact support (Which is Callum).");
+    submitButton.disabled = false;
+    submitButton.textContent = originalText;
   }
 }
 

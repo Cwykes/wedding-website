@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RSVP to Callum & Jade's wedding. Please confirm your attendance." />
   <title>Wedding RSVP</title>
   <link rel="stylesheet" href="./RSVP.css">
   <link rel="stylesheet" href="../Global.css">
@@ -28,21 +29,21 @@
               
               <details class="guest-category">
                 <summary>Family</summary>
-                <button type="button" onclick="selectGuest('Allison, Jensen & Megan')">Allison, Jensen & Megan</button>
-                <button type="button" onclick="selectGuest('Ethan')">Ethan</button>
-                <button type="button" onclick="selectGuest('Jack & Penny')">Jack & Penny</button>
-                <button type="button" onclick="selectGuest('Jennifer & Doug')">Jennifer & Doug</button>
-                <button type="button" onclick="selectGuest('Jon & Michelle')">Jon & Michelle</button>
-                <button type="button" onclick="selectGuest('Ken & Kelly')">Ken & Kelly</button>
-                <button type="button" onclick="selectGuest('Teresa, Peter & Amy')">Teresa, Peter & Amy</button>
-                <button type="button" onclick="selectGuest('Terry & Josie')">Terry & Josie</button>
-                <button type="button" onclick="selectGuest('William & Jo')">William & Jo</button>
-                <button type="button" onclick="selectGuest('Wun Lin & Dave')">Wun Lin & Dave</button>
+                <button type="button" data-guest="Allison, Jensen & Megan">Allison, Jensen & Megan</button>
+                <button type="button" data-guest="Ethan">Ethan</button>
+                <button type="button" data-guest="Jack & Penny">Jack & Penny</button>
+                <button type="button" data-guest="Jennifer & Doug">Jennifer & Doug</button>
+                <button type="button" data-guest="Jon & Michelle">Jon & Michelle</button>
+                <button type="button" data-guest="Ken & Kelly">Ken & Kelly</button>
+                <button type="button" data-guest="Teresa, Peter & Amy">Teresa, Peter & Amy</button>
+                <button type="button" data-guest="Terry & Josie">Terry & Josie</button>
+                <button type="button" data-guest="William & Jo">William & Jo</button>
+                <button type="button" data-guest="Wun Lin & Dave">Wun Lin & Dave</button>
               </details>
 
                 <details class="guest-category">
                   <summary>Friends</summary>
-                  <button type="button" onclick="selectGuest('Anna & Kieron')">Anna & Kieron</button>
+                  <button type="button" data-guest="Anna & Kieron">Anna & Kieron</button>
                 </details>       
             </details>
             
@@ -51,25 +52,25 @@
               
               <details class="guest-category">
                 <summary>Family</summary>
-                  <button type="button" onclick="selectGuest('Alan, Kelly & Seren')">Alan, Kelly & Seren</button>
-                  <button type="button" onclick="selectGuest('Amanda')">Amanda</button>
-                  <button type="button" onclick="selectGuest('Charlotte, Dom, Oscar, Rose & Violet')">Charlotte, Dom, Oscar, Rose & Violet</button>
-                  <button type="button" onclick="selectGuest('Finley & Kieran')">Finley & Kieran</button>
-                  <button type="button" onclick="selectGuest('Jordan, Ellie & Lucas')">Jordan, Ellie & Lucas</button>
-                  <button type="button" onclick="selectGuest('Louise')">Louise</button>
-                  <button type="button" onclick="selectGuest('Marguerite')">Marguerite</button>
-                  <button type="button" onclick="selectGuest('Marion')">Marion</button>
-                  <button type="button" onclick="selectGuest('Mark')">Mark</button>
-                  <button type="button" onclick="selectGuest('Sue & Neil')">Sue & Neil</button>
-                  <button type="button" onclick="selectGuest('Tony & Debbie')">Tony & Debbie</button>
+                  <button type="button" data-guest="Alan, Kelly & Seren">Alan, Kelly & Seren</button>
+                  <button type="button" data-guest="Amanda">Amanda</button>
+                  <button type="button" data-guest="Charlotte, Dom, Oscar, Rose & Violet">Charlotte, Dom, Oscar, Rose & Violet</button>
+                  <button type="button" data-guest="Finley & Kieran">Finley & Kieran</button>
+                  <button type="button" data-guest="Jordan, Ellie & Lucas">Jordan, Ellie & Lucas</button>
+                  <button type="button" data-guest="Louise">Louise</button>
+                  <button type="button" data-guest="Marguerite">Marguerite</button>
+                  <button type="button" data-guest="Marion">Marion</button>
+                  <button type="button" data-guest="Mark">Mark</button>
+                  <button type="button" data-guest="Sue & Neil">Sue & Neil</button>
+                  <button type="button" data-guest="Tony & Debbie">Tony & Debbie</button>
                 </details>
 
                 <details class="guest-category">
                   <summary>Friends</summary>
-                  <button type="button" onclick="selectGuest('Abdi')">Abdi</button>
-                  <button type="button" onclick="selectGuest('Lauren')">Lauren</button>
-                  <button type="button" onclick="selectGuest('Natasha')">Natasha</button>
-                  <button type="button" onclick="selectGuest('Pedro')">Pedro</button>
+                  <button type="button" data-guest="Abdi">Abdi</button>
+                  <button type="button" data-guest="Lauren">Lauren</button>
+                  <button type="button" data-guest="Natasha">Natasha</button>
+                  <button type="button" data-guest="Pedro">Pedro</button>
                 </details>  
             </details>
           </div>
@@ -80,32 +81,32 @@
           <div id="guest-dropdown-evening">
             <details class="guest-category">
               <summary>Bride</summary>
-                <button type="button" onclick="selectGuest('Dave')">Dave</button>
-                <button type="button" onclick="selectGuest('Deborah & Mark')">Deborah & Mark</button>
-                <button type="button" onclick="selectGuest('Laura & Ric')">Laura & Ric</button>
-                <button type="button" onclick="selectGuest('Leigh & Vicki')">Leigh & Vicki</button>
-                <button type="button" onclick="selectGuest('Melanie')">Melanie</button>
-                <button type="button" onclick="selectGuest('Michelle, Simon & Charlotte')">Michelle, Simon & Charlotte</button>
-                <button type="button" onclick="selectGuest('Michelle, Wayne & Sam')">Michelle, Wayne & Sam</button>
-                <button type="button" onclick="selectGuest('Mona & Paul')">Mona & Paul</button>
-                <button type="button" onclick="selectGuest('Natalie & Luke')">Natalie & Luke</button>
-                <button type="button" onclick="selectGuest('Sam')">Sam</button>
-                <button type="button" onclick="selectGuest('Sarah & Mike')">Sarah & Mike</button>
-                <button type="button" onclick="selectGuest('Sarah & Tom')">Sarah & Tom</button>
+                <button type="button" data-guest="Dave">Dave</button>
+                <button type="button" data-guest="Deborah & Mark">Deborah & Mark</button>
+                <button type="button" data-guest="Laura & Ric">Laura & Ric</button>
+                <button type="button" data-guest="Leigh & Vicki">Leigh & Vicki</button>
+                <button type="button" data-guest="Melanie">Melanie</button>
+                <button type="button" data-guest="Michelle, Simon & Charlotte">Michelle, Simon & Charlotte</button>
+                <button type="button" data-guest="Michelle, Wayne & Sam">Michelle, Wayne & Sam</button>
+                <button type="button" data-guest="Mona & Paul">Mona & Paul</button>
+                <button type="button" data-guest="Natalie & Luke">Natalie & Luke</button>
+                <button type="button" data-guest="Sam">Sam</button>
+                <button type="button" data-guest="Sarah & Mike">Sarah & Mike</button>
+                <button type="button" data-guest="Sarah & Tom">Sarah & Tom</button>
             </details>
             
             <details class="guest-category">
               <summary>Groom</summary>
-                <button type="button" onclick="selectGuest('Aaron & Nour')">Aaron & Nour</button>
-                <button type="button" onclick="selectGuest('Chris & Wife')">Chris & Wife</button>
-                <button type="button" onclick="selectGuest('Danny & Chloe')">Danny & Chloe</button>
-                <button type="button" onclick="selectGuest('Felix & Beth')">Felix & Beth</button>
-                <button type="button" onclick="selectGuest('Jacob')">Jacob</button>
-                <button type="button" onclick="selectGuest('Joe')">Joe</button>
-                <button type="button" onclick="selectGuest('Lauren & James')">Lauren & James</button>
-                <button type="button" onclick="selectGuest('Natasha & Brandon')">Natasha & Brandon</button>
-                <button type="button" onclick="selectGuest('Niall & Holly')">Niall & Holly</button>
-                <button type="button" onclick="selectGuest('Sareena')">Sareena</button>
+                <button type="button" data-guest="Aaron & Nour">Aaron & Nour</button>
+                <button type="button" data-guest="Chris & Wife">Chris & Wife</button>
+                <button type="button" data-guest="Danny & Chloe">Danny & Chloe</button>
+                <button type="button" data-guest="Felix & Beth">Felix & Beth</button>
+                <button type="button" data-guest="Jacob">Jacob</button>
+                <button type="button" data-guest="Joe">Joe</button>
+                <button type="button" data-guest="Lauren & James">Lauren & James</button>
+                <button type="button" data-guest="Natasha & Brandon">Natasha & Brandon</button>
+                <button type="button" data-guest="Niall & Holly">Niall & Holly</button>
+                <button type="button" data-guest="Sareena">Sareena</button>
             </details>
           </div>
         </div>
@@ -161,7 +162,7 @@
     </form>
   <footer>
     <p>We can’t wait to celebrate with you 💕</p>
-  </footer>
-    <script src="./RSVP.js"></script>
+  </footer>    
+  <script src="../utils.js"></script>    <script src="./RSVP.js"></script>
 </body>
 </html>
