@@ -84,7 +84,10 @@ details summary::-webkit-details-marker {
   cursor: pointer;
   text-align: left;
 
-  background-color: 0;
+  border: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 #selection-box {
