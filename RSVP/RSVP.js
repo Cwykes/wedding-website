@@ -116,7 +116,7 @@ async function _OnSubmitAsync(e) {
       <div style="padding: 2rem; text-align: center;">
         <h2>Thank you!</h2>
         <p>Your RSVP has been sent.</p>
-        <p>Redirecting…</p>
+        <p>Redirecting you back to the main page...</p>
       </div>`;
 
     setTimeout(() => {
