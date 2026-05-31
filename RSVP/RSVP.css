@@ -41,10 +41,6 @@ label {
   display: none;
 }
 
-details[open] > summary {
-  background-color: var(--white);
-}
-
 #attendance, #guests, #allergies, #message {
     font-family: "Bonheur Royale", cursive;
     font-size: 1.5rem;
@@ -89,10 +85,6 @@ details summary::-webkit-details-marker {
   text-align: left;
 
   background-color: 0;
-}
-
-.guest-category button:hover {
-  background: var(--white);
 }
 
 #selection-box {
