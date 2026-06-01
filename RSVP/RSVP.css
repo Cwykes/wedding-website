@@ -133,7 +133,7 @@ footer {
   align-items: center;
   gap: 0.5rem;
   font-size: 1rem;
-  font-weight: 400;
+  font-family: "Bonheur Royale", cursive;
   cursor: pointer;
   line-height: 1;
 }
