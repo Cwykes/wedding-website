@@ -113,6 +113,10 @@ input, select, textarea, button {
   color: var(--black);
 }
 
+select {
+  text-align: -webkit-center;
+}
+
 button {
   margin-top: 1.5rem;
   border-color: transparent;
