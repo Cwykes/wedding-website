@@ -115,7 +115,7 @@ input, select, textarea, button {
 
 select {
   text-align: center;
-  text-align-last: center; /* Safari fix */
+  text-align-last: center;
 }
 
 @supports (-webkit-touch-callout: none) {
