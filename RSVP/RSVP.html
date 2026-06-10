@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="RSVP to Callum & Jade's wedding. Please confirm your attendance." />
+  <meta name="description" content="RSVP to Callum & Jade's wedding." />
   <title>Wedding RSVP</title>
   <link rel="stylesheet" href="./RSVP.css">
   <link rel="stylesheet" href="../Global.css">
@@ -159,6 +159,12 @@
       <input type="hidden" name="_redirect" value="../index.html">
       <input type="hidden" id="guest" name="guest" required>
     </form>
+  <div id="customAlert" class="custom-alert hidden">
+    <div class="custom-alert-content">
+      <p id="customAlertMessage"></p>
+      <button id="customAlertButton">Ok</button>
+    </div>
+  </div>
   <footer>
     <p>We can’t wait to celebrate with you 💕</p>
   </footer>    

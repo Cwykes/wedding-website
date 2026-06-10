@@ -4,6 +4,24 @@ const RSVPForm = document.getElementById("rsvpForm"),
       guestCountInput = document.getElementById("guests"),
       allergiesCheckboxes = document.querySelectorAll('input[name="allergies-item"]');
 
+function showCustomAlert(message) {
+  const alertBox = document.getElementById("customAlert");
+  const alertMessage = document.getElementById("customAlertMessage");
+  const alertButton = document.getElementById("customAlertButton");
+  
+  alertMessage.textContent = message;
+  alertBox.classList.remove("hidden");
+  
+  alertButton.focus();
+  
+  return new Promise((resolve) => {
+    alertButton.onclick = () => {
+      alertBox.classList.add("hidden");
+      resolve();
+    };
+  });
+}
+
 function _bindEvents(){
   RSVPForm.addEventListener("submit", _OnSubmitAsync);
   attendanceInput.addEventListener("change", _OnAttendanceChange);
@@ -77,12 +95,17 @@ function _updateAllergiesValue() {
 async function _OnSubmitAsync(e) {
   e.preventDefault();
 
+  if (!guestInput.value) {
+    await showCustomAlert("Please select a guest.");
+    return;
+  }
+
   // Validate that at least one allergy is selected if showing the allergy section
   const allergySection = document.getElementById("section-allergies");
   if (!allergySection.classList.contains("hidden")) {
     const anyChecked = Array.from(allergiesCheckboxes).some(checkbox => checkbox.checked);
     if (!anyChecked) {
-      alert("Please select at least one dietary requirement option.");
+      await showCustomAlert("Please select at least one dietary requirement option.");
       return;
     }
   }
@@ -104,7 +127,7 @@ async function _OnSubmitAsync(e) {
 
     if (!response.ok) {
       console.error("Formspree error:", response.statusText);
-      alert("Something went wrong. Please try again.");
+      await showCustomAlert("Something went wrong. Please try again.");
       submitButton.disabled = false;
       submitButton.textContent = originalText;
       return;
@@ -123,7 +146,7 @@ async function _OnSubmitAsync(e) {
 
   } catch (err) {
     console.error("Network error:", err);
-    alert("Unable to send. Please contact support (Which is Callum).");
+    await showCustomAlert("Unable to send. Please contact support (Which is Callum).");
     submitButton.disabled = false;
     submitButton.textContent = originalText;
   }
